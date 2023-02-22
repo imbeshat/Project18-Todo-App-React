@@ -58,6 +58,15 @@ h1 {
 	cursor: pointer;
 }
 
+.todo-btn-submit:hover {
+	background: #1faa59;
+	transition: 0.4s ease-in-out;
+}
+
+.todo-btn-submit:active {
+	transform: translateY(2px);
+}
+
 .todo {
 	display: flex;
 	justify-content: space-between;
@@ -70,8 +79,22 @@ h1 {
 	cursor: pointer;
 }
 
-.fa-trash {
-	margin-left: 0.75rem;
+.delete:hover {
+	fill: #e21717;
+	transition: 0.4s ease-out;
+}
+
+.delete:active {
+	transform: translateY(2px);
+}
+
+.edit:hover {
+	fill: #1b98f5;
+	transition: 0.4s ease-out;
+}
+
+.edit:active {
+	transform: translateY(2px);
 }
 
 .completed {
