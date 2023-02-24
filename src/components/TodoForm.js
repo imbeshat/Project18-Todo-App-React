@@ -5,7 +5,11 @@ const TodoForm = ({ addTodo }) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		addTodo(value);
+		if (value !== "") {
+			addTodo(value);
+		} else {
+			alert("Todo cannot be empty");
+		}
 		setValue("");
 	};
 
@@ -13,7 +17,7 @@ const TodoForm = ({ addTodo }) => {
 		<form className="todo-form" onSubmit={handleSubmit}>
 			<input type="text" className="todo-input" value={value} placeholder="Enter your Todo" onChange={(e) => setValue(e.target.value)} />
 			<button type="submit" className="todo-btn-submit">
-				Add Todo
+				+
 			</button>
 		</form>
 	);
