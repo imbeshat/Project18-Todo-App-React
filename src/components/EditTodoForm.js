@@ -5,7 +5,11 @@ const EditTodoForm = ({ editTodo, task }) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		editTodo(value, task.id);
+		if (value !== "") {
+			editTodo(value, task.id);
+		} else {
+			alert("Todo cannot be empty");
+		}
 		setValue("");
 	};
 
