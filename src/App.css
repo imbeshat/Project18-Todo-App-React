@@ -91,6 +91,10 @@ h1 {
 	background: #8758ff30;
 }
 
+.todo p {
+	text-align: left;
+}
+
 .delete:hover {
 	fill: #e21717;
 	transition: 0.4s ease-out;
@@ -112,4 +116,21 @@ h1 {
 .completed {
 	color: #b2a0e0;
 	text-decoration: line-through;
+}
+
+@media screen and (max-width: 433px) {
+	.todo-input {
+		border: 1px solid #8758ff;
+		width: 200px;
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 446px) {
+	.todo div svg {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 8px;
+	}
 }
