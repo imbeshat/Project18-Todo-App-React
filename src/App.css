@@ -62,8 +62,20 @@ h1 {
 	font-size: 30px;
 	margin-left: 10px;
 }
+.todo-btn-update {
+	background: #8758ff;
+	color: #fff;
+	border: none;
+	padding: 5px 15px;
+	cursor: pointer;
+	font-size: 20px;
+}
 
 .todo-btn-submit:hover {
+	background: #1faa59;
+	transition: 0.4s ease-out;
+}
+.todo-btn-update:hover {
 	background: #1faa59;
 	transition: 0.4s ease-out;
 }
@@ -132,5 +144,13 @@ h1 {
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 8px;
+	}
+}
+
+@media screen and (max-width: 517px) {
+	.todo-btn-update {
+		margin-top: -10px;
+		margin-bottom: 20px;
+		font-size: 16px;
 	}
 }
