@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Flip, toast } from "react-toastify";
 
 const EditTodoForm = ({ editTodo, task }) => {
 	const [value, setValue] = useState(task.task);
@@ -8,7 +9,17 @@ const EditTodoForm = ({ editTodo, task }) => {
 		if (value !== "") {
 			editTodo(value, task.id);
 		} else {
-			alert("Todo cannot be empty");
+			return toast("Todo can't be empty!", {
+				type: "error",
+				position: "bottom-center",
+				autoClose: 3500,
+				hideProgressBar: false,
+				closeOnClick: true,
+				draggable: true,
+				progress: undefined,
+				theme: "colored",
+				transition: Flip,
+			});
 		}
 		setValue("");
 	};
