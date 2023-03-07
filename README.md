@@ -10,4 +10,4 @@ A Simple Todo App created using react
 
 ### Deployed Link - https://todo-app-raect-1.netlify.app/
 
-![image](https://user-images.githubusercontent.com/48837703/220850631-ac0eff99-8fbb-488d-8936-3ab1d2d1e4a3.png)
+![image](https://user-images.githubusercontent.com/48837703/221256124-3a79009a-f127-4e8d-b46b-185142f6c058.png)
