@@ -1,4 +1,5 @@
 import React from "react";
+import { Flip, toast } from "react-toastify";
 
 const Todo = ({ task, toggleComplete, deleteTodo, editTodo }) => {
 	return (
@@ -29,7 +30,20 @@ const Todo = ({ task, toggleComplete, deleteTodo, editTodo }) => {
 					width="2em"
 					xmlns="http://www.w3.org/2000/svg"
 					className="delete"
-					onClick={() => deleteTodo(task.id)}
+					onClick={() => {
+						deleteTodo(task.id);
+						return toast("Todo deleted successfully!", {
+							type: "error",
+							position: "bottom-center",
+							autoClose: 2500,
+							hideProgressBar: false,
+							closeOnClick: true,
+							draggable: true,
+							progress: undefined,
+							theme: "colored",
+							transition: Flip,
+						});
+					}}
 				>
 					<path d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"></path>
 				</svg>
