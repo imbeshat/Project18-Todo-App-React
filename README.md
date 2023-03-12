@@ -1,4 +1,4 @@
-# project18-todo-app-react
+# Project18-Todo-App-React
 
 A Simple Todo App created using react
 
@@ -9,5 +9,4 @@ A Simple Todo App created using react
 - Run the application using `npm start`
 
 ### Deployed Link - https://todo-app-raect-1.netlify.app/
-
-![image](https://user-images.githubusercontent.com/48837703/221256124-3a79009a-f127-4e8d-b46b-185142f6c058.png)
+![image](https://user-images.githubusercontent.com/48837703/224557395-7547d4ed-1ae8-4444-bf8d-77be55abb030.png)
