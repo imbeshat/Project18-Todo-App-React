@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TodoForm from "./TodoForm";
 import { v4 as uuidv4 } from "uuid";
 import Todo from "./Todo";
@@ -7,7 +7,20 @@ import { Flip, toast } from "react-toastify";
 uuidv4();
 
 const TodoWrapper = () => {
-	const [todos, setTodos] = useState([]);
+	const getLocalStorageTodos = () => {
+		let todos = localStorage.getItem("todos");
+		if (todos) {
+			return (todos = JSON.parse(localStorage.getItem("todos")));
+		} else {
+			return [];
+		}
+	};
+
+	const [todos, setTodos] = useState(getLocalStorageTodos());
+
+	useEffect(() => {
+		localStorage.setItem("todos", JSON.stringify(todos));
+	}, [todos]);
 
 	const addTodo = (todo) => {
 		if (todo.trim() === "") {
